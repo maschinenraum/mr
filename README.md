@@ -2,7 +2,7 @@
 
 ## Install ([from](https://github.com/37signals/sub#install-your-sub))
 
-So you've prepared your own sub, now how do you use it? Here's one way you could install your sub in your `$HOME` directory:
+Install in your `$HOME` directory:
 
     cd
     git clone [YOUR GIT HOST URL]/sub.git .sub
