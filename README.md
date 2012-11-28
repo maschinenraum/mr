@@ -2,7 +2,7 @@
 
 ## Install ([from](https://github.com/37signals/sub#install-your-sub))
 
-Install in your `$HOME` directory:
+**Install in your `$HOME` directory**:
 
     cd
     git clone https://github.com/maschinenraum/mr.git .mr
@@ -16,10 +16,16 @@ For zsh users:
 
     echo 'eval "$($HOME/.mr/bin/mr init -)"' >> ~/.zshenv
     source ~/.zshenv
+    
+> If you have your [dotfiles in git](http://dotfiles.github.com), don't forget to add it to `~.extra` instead!
 
-If you use [dotfiles in git](http://dotfiles.github.com), don't forget to add it to `~.extra`!
+***(Alternative) system-wide install*** (won't have autocompletion, but works with every user and `cron`):
 
-You could also install your sub in a different directory, say `/usr/local`. This is just one way you could provide a way to install your sub.
+    DIR="/usr/local"
+    git clone https://github.com/maschinenraum/mr.git "$DIR/mr"
+    ln -s "$DIR/mr/bin/mr" /usr/local/bin/mr
+
+
 
 
 ## Develop
