@@ -19,9 +19,14 @@ For zsh users:
 
 You could also install your sub in a different directory, say `/usr/local`. This is just one way you could provide a way to install your sub.
 
-## Extend
 
-It is really simple: to add $COMMAND, just make a new script in the `libexec` folder.
+## Develop
+
+1. The `master` branch is 'stable'. 
+2. Fork and use topic branches (aka `my-new-command`)
+3. Send merge request (either click it on github or send email to @eins78)
+
+Adding a command is really simple: just make a new script in the `libexec` folder.
 Autcompletion and built-in help is all handled by the tool, just fill out the comments.
 
 You can use the following template:
