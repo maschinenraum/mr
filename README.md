@@ -5,17 +5,19 @@
 Install in your `$HOME` directory:
 
     cd
-    git clone [YOUR GIT HOST URL]/sub.git .sub
+    git clone https://github.com/maschinenraum/mr.git .mr
 
 For bash users:
 
-    echo 'eval "$($HOME/.sub/bin/sub init -)"' >> ~/.bash_profile
+    echo 'eval "$($HOME/.mr/bin/mr init -)"' >> ~/.bash_profile
     exec bash
 
 For zsh users:
 
-    echo 'eval "$($HOME/.sub/bin/sub init -)"' >> ~/.zshenv
+    echo 'eval "$($HOME/.mr/bin/mr init -)"' >> ~/.zshenv
     source ~/.zshenv
+
+If you use [dotfiles in git](http://dotfiles.github.com), don't forget to add it to `~.extra`!
 
 You could also install your sub in a different directory, say `/usr/local`. This is just one way you could provide a way to install your sub.
 
