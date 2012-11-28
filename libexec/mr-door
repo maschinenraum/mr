@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Usage: mr door
+# Summary: Check if the MR door is open
+# Help: Check if the MR door is open (via twitter)
+# Exits 0 (open) or 1 (closed)
+
+set -e
+
+if curl -silent twitter.com/users/show/mr_door_status.json | grep "offen" &>/dev/null
+then
+  echo "MR is open"
+  exit 0
+else
+  echo "MR is closed"
+  exit 1
+fi
