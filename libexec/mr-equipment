@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Usage: mr equipment
+# Summary: Manage equipment
+# Help: Keep track of equipment and reminds people to bring it back.
+# Exits 0 (open) or 1 (closed)
+
+set -e
+JSON='/home/ed/sh/stuff.json'
+I=0;
+
+for MAIL in `cat $JSON | jq .issues[].custom_fields[0].value`; do
+	
+	WHO=$MAIL
+	WHAT=`cat $JSON | jq .issues[$I].subject`
+	WHEN=`cat $JSON | jq .issues[$I].created_on`
+	TILL=`cat $JSON | jq .issues[$I].custom_fields[1].value`
+	
+	echo "Hello $MAIL, please return $WHAT."
+	echo "You borrowed it at $WHEN and wanted to return it till $TILL, which you didn't"
+	I=$I+1
+done
+exit 0;
+
